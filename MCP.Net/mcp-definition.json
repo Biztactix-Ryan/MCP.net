@@ -1,0 +1,82 @@
+﻿{
+  "tools": [
+    {
+      "name": "lookup_class",
+      "description": "Get detailed information about a class structure",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "className": {
+            "type": "string",
+            "description": "Fully qualified class name"
+          }
+        },
+        "required": [ "className" ]
+      }
+    },
+    {
+      "name": "lookup_method",
+      "description": "Get detailed information about a method structure",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "className": {
+            "type": "string",
+            "description": "Fully qualified class name"
+          },
+          "methodName": {
+            "type": "string",
+            "description": "Method name"
+          }
+        },
+        "required": [ "className", "methodName" ]
+      }
+    },
+    {
+      "name": "analyze_extensions",
+      "description": "Analyze extension methods for a given type",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "typeName": {
+            "type": "string",
+            "description": "Type to analyze extensions for"
+          }
+        },
+        "required": [ "typeName" ]
+      }
+    },
+    {
+      "name": "analyze_execution_flow",
+      "description": "Analyze method execution flow and call graph",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "className": {
+            "type": "string",
+            "description": "Fully qualified class name"
+          },
+          "methodName": {
+            "type": "string",
+            "description": "Method name"
+          }
+        },
+        "required": [ "className", "methodName" ]
+      }
+    },
+    {
+      "name": "search_symbols",
+      "description": "Search for types and methods matching a search term",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "searchTerm": {
+            "type": "string",
+            "description": "Search term to match against symbol names"
+          }
+        },
+        "required": [ "searchTerm" ]
+      }
+    }
+  ]
+}
